@@ -7,6 +7,8 @@ import fs from  "fs"
 import path from  "path"
 import "dotenv/config"
 
+
+const PORT = process.env.PORT
 const app = express()
 app.use(express.json())
 app.use(cors())
@@ -36,4 +38,4 @@ app.use( (error,req,res,next) => {
 } )
 
 
-app.listen(5656,()=>console.log("Server is run..."))
+app.listen(PORT,()=>console.log("Server is run..."))
